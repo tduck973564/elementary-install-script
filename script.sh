@@ -36,6 +36,15 @@ echo Installation of TypeScript and JavaScript
 sudo apt install -y nodejs npm
 sudo npm install -g typescript
 
+echo Installation of C# and .NET
+wget https://packages.microsoft.com/config/ubuntu/20.04/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
+sudo dpkg -i packages-microsoft-prod.deb
+rm packages-microsoft-prod.deb
+sudo apt-get update; \
+  sudo apt-get install -y apt-transport-https && \
+  sudo apt-get update && \
+  sudo apt-get install -y dotnet-sdk-5.0
+
 echo Installation of VSCode extensions
 code --install-extension ms-python.python
 code --install-extension VisualStudioExptTeam.vscodeintellicode
@@ -53,6 +62,7 @@ code --install-extension ritwickdey.liveserver
 code --install-extension ritwickdey.live-sass
 code --install-extension github.vscode-pull-request-github
 code --install-extension eamodio.gitlens
+code --install-extension ms-dotnettools.csharp
 
 echo Installation of miscellaneous useful apps
 sudo apt install -y ffmpeg pavucontrol pulseeffects

@@ -31,6 +31,7 @@ echo Installation of Python
 sudo apt install -y python
 pip install --upgrade pip
 pip install pylint
+curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python -
 
 echo Installation of TypeScript and JavaScript
 sudo apt install -y nodejs npm
